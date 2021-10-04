@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './SpinButton.css';
+import styles from './SpinButton.module.css';
 
 interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
   label: string;
@@ -69,11 +69,11 @@ const SpinButton = ({
 
   return (
     <div>
-      <span className="spin-button__label">{label}</span>
-      <div className="spin-button__wrapper">
+      <span className={styles['spin-button__label']}>{label}</span>
+      <div className={styles['spin-button__wrapper']}>
         <button
           type="button"
-          className="spin-button__button sub"
+          className={`${styles['spin-button__button']} ${styles.sub}`}
           aria-disabled={isDecreaseDisabled}
           onClick={decreaseValue}
         >
@@ -83,7 +83,7 @@ const SpinButton = ({
           type="text"
           value={value}
           onChange={handleChangeValue}
-          className="spin-button__input"
+          className={styles['spin-button__input']}
           role="spinbutton"
           maxLength={1}
           aria-valuenow={Number(value)}
@@ -95,13 +95,18 @@ const SpinButton = ({
         />
         <button
           type="button"
-          className="spin-button__button add"
+          className={`${styles['spin-button__button']} ${styles.add}`}
           aria-disabled={isIncreaseDisabled}
           onClick={increaseValue}
         >
           {increaseButtonLabel}
         </button>
-        <div className="hidden" aria-atomic="true" aria-live="assertive" aria-relevant="additions">
+        <div
+          className={styles.hidden}
+          aria-atomic="true"
+          aria-live="assertive"
+          aria-relevant="additions"
+        >
           {statusMessage}
         </div>
       </div>

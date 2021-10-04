@@ -37,20 +37,20 @@
 }
 
 .spin-button__button.add {
-  background: url(../../assets/svg/add.svg) center;
+  background: url(../../../public/images/add.svg) center;
 }
 
 .spin-button__button.add[aria-disabled=true] {
-  background: url(../../assets/svg/add--disabled.svg) center;
+  background: url(../../../public/images/add--disabled.svg) center;
   cursor: not-allowed;
 }
 
 .spin-button__button.sub {
-  background: url(../../assets/svg/sub.svg) center;
+  background: url(../../../public/images/sub.svg) center;
 }
 
 .spin-button__button.sub[aria-disabled=true] {
-  background: url(../../assets/svg/sub--disabled.svg) center;
+  background: url(../../../public/images/sub--disabled.svg) center;
   cursor: not-allowed;
 }
 

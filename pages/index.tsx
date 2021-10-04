@@ -1,8 +1,7 @@
 import { useState } from 'react';
-import SpinButton from './components/SpinButton/SpinButton';
-import './App.css';
+import SpinButton from '../src/components/SpinButton/SpinButton';
 
-const App = () => {
+const Index = () => {
   const valueState = useState<string | number>(1);
 
   return (
@@ -22,4 +21,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Index;
